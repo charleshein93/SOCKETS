@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Aplicación con Socket</title>
+	<script src="/socket.io/socket.io.js" ></script>
+	<script src="main.js" ></script>
+</head>
+<body>
+	<h1>My app</h1>
+
+	<div id="messages"></div>
+	<br/>
+
+	<script LANGUAGE=JAVASCRIPT>>
+
+	function limpiar() {
+	    setTimeout('document.formulario.reset()',2000);
+	    return false;
+	}
+
+	</script>
+
+	<form name="formulario" onsubmit="return addMessage(this)">
+		
+		<!-- <input type="text" id="username" placeholder="Tu nombre"> -->
+		<select name="text" id="username">
+			<option disabled selected value> -- Seleccione algun usuario -- </option>
+			<option value="TEST1">TEST1</option>
+			<option value="TEST2">TEST2</option>
+			<option value="TEST3">TEST3</option>
+			<option value="TEST4">TEST4</option>
+			<option value="TEST5">TEST5</option>
+		</select>
+		<input type="text" id="texto" placeholder="Escribe aquí...">
+		<input type="submit" value="Enviar" onsubmit="return limpiar()" >
+
+	</form>
+</body>
+</html>
