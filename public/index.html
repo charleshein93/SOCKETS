@@ -24,7 +24,7 @@
 	<form name="formulario" onsubmit="return addMessage(this)">
 		
 		<!-- <input type="text" id="username" placeholder="Tu nombre"> -->
-		<select name="text" id="username">
+		<select name="text" id="username" required>
 			<option disabled selected value> -- Seleccione algun usuario -- </option>
 			<option value="TEST1">TEST1</option>
 			<option value="TEST2">TEST2</option>
@@ -32,7 +32,7 @@
 			<option value="TEST4">TEST4</option>
 			<option value="TEST5">TEST5</option>
 		</select>
-		<input type="text" id="texto" placeholder="Escribe aquí...">
+		<input type="text" id="texto" placeholder="Escribe aquí..." required>
 		<input type="submit" value="Enviar" onsubmit="return limpiar()" >
 
 	</form>
